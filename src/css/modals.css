@@ -1,0 +1,102 @@
+.modal{
+  position: absolute;
+  inset: 0;
+
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: rgba(0, 0, 0, .65);
+
+  color:  #fff;
+
+  transition: all ease-out .25s;
+  opacity: 0;
+  transform: translateY(-100%);
+}
+
+.modal.showing {
+  transform: translateY(0%);
+  opacity: 1;
+}
+.modal-content {
+  display: flex;
+  flex-direction: column;
+
+  gap: 16px;
+
+  width: 75%;
+
+  background-color: #be97be;
+
+  border-radius: 1em;
+
+  box-shadow: 10px 15px 15px 5px rgba(0,0,0,0.75);
+}
+
+.modal-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 16px 18px 0px;  
+}
+
+.modal-head h2, .modal-head i {
+  line-height: 2em;
+  font-size: 2em;
+}
+
+.modal-head h2 {
+  flex-grow: 1;
+
+  text-align: center;
+}
+
+.modal-body {
+  display: flex;
+  flex-direction: column;
+
+  gap: 32px;
+
+  padding: 0 18px 32px;
+}
+
+.player-btn {
+  border: none;
+
+  padding: .5em .35em;
+
+  font-size: 1.5em;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+
+  font-weight: 700;
+
+  color: #fff;
+  background: #9003d6;
+  border-radius: 8px;
+}
+
+.player-btn:focus, .player-btn:hover {
+  background: #ed15ed;
+  color:#3d025a
+}
+
+#win .modal-body {
+  text-align: center;
+}
+
+.point-line {
+  display: flex;
+
+  justify-content: space-between;
+
+  color: #ff03f2
+}
+
+.point-line span {
+  color: #33028f
+}

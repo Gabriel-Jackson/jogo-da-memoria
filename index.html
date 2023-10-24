@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jogo da Memória</title>
+
+  <link rel="stylesheet" href="./src/css/reset.css">
+  <link rel="stylesheet" href="./src/css/main.css">
+  <link rel="stylesheet" href="./src/css/modals.css">
+</head>
+<body class="modal-open">
+  <div class="container">
+    <div class="game-header">
+      <h2>Jogo da Memória</h2>
+    </div>
+    <div class="game"></div>
+    <button class="reset" onclick="window.location.reload()">
+      Reset Game
+    </button>
+  </div>
+
+  <div class="modal showing" id="createPlayers">
+    <div class="modal-content">
+      <div class="modal-head">
+        <h2>Número de jogadores</h2>
+      </div>
+
+      <div class="modal-body">
+        <button onclick="createPlayers();closeModal('createPlayers')" class="player-btn">
+          1 Jogador
+        </button>
+        <button onclick="createPlayers(2);closeModal('createPlayers')" class="player-btn">
+          2 Jogadores
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="win">
+    <div class="modal-content">
+      <div class="modal-head">
+        <h2>O jogo acabou!!</h2>
+      </div>
+
+      <div class="modal-body">
+        <div class="final-score">
+        </div>
+        <button onclick="resetGame();closeModal('win')" class="player-btn"> Jogar novamente</button>
+      </div>
+    </div>
+  </div>
+  <script src="./src/js/Player.js"></script>
+  <script src="./src/js/modals.js"></script>
+  <script src="./src/js/engine.js" defer></script>
+</body>
+</html>
